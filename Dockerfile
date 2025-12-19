@@ -30,11 +30,11 @@ RUN set -x \
   && chown -R "${USER}:${USER}" "${STEAMAPPDIR}" \
   && bash "${STEAMCMDDIR}/steamcmd.sh" +force_install_dir "${STEAMAPPDIR}" \
   +login anonymous \
-  +app_update "${STEAMAPPID}" -beta unstable \
+  +app_update "${STEAMAPPID}" -beta 42.13.1 \
   +quit \
   ; bash "${STEAMCMDDIR}/steamcmd.sh" +force_install_dir "${STEAMAPPDIR}" \
   +login anonymous \
-  +app_update "${STEAMAPPID}" -beta unstable validate \
+  +app_update "${STEAMAPPID}" -beta 42.13.1 validate \
   +quit
 
 # Copy the entry point file
